@@ -1,0 +1,9 @@
+<p><%= @restaurant.address %></p>
+<p><%= @restaurant.phone_number %></p>
+
+<% @restaurant.reviews.each do |review| %>
+  <h2><%= review.content %></h2>
+  <p><%= review.rating %></p>
+<% end %>
+
+<%= link_to “Retour”, restaurants_path %>
